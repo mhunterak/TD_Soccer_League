@@ -61,6 +61,7 @@ with open('soccer_players.csv') as spreadsheet:
             }
             # at the dictionary to the global dictionary
             PLAYERS[row[0]] = player_dict
+
     # Create logic that can iterate through all 18 players and assign them to
     # teams such that each team has the same number of players. The number of
     # experienced players on each team should also be the same.
