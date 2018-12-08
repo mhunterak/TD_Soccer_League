@@ -1,0 +1,27 @@
+TEAM DRAGONS
+Joe Smith - Has Played Before: YES Guardian(s): Jim and Jan Smith
+Karl Saygan - Has Played Before: YES Guardian(s): Heather Bledsoe
+Phillip Helm - Has Played Before: YES Guardian(s): Thomas Helm and Eva Jones
+Eva Gordon - Has Played Before: NO Guardian(s): Wendy and Mike Gordon
+Sammy Adams - Has Played Before: NO Guardian(s): Jeff Adams
+Ben Finkelstein - Has Played Before: NO Guardian(s): Aaron and Jill Finkelstein
+
+
+TEAM SHARKS
+Jill Tanner - Has Played Before: YES Guardian(s): Clara Tanner
+Suzane Greenberg - Has Played Before: YES Guardian(s): Henrietta Dumas
+Les Clay - Has Played Before: YES Guardian(s): Wynonna Brown
+Matt Gill - Has Played Before: NO Guardian(s): Charles and Sylvia Gill
+Sal Dali - Has Played Before: NO Guardian(s): Gala Dali
+Chloe Alaska - Has Played Before: NO Guardian(s): David and Jamie Alaska
+
+
+TEAM RAPTORS
+Bill Bon - Has Played Before: YES Guardian(s): Sara and Jenny Bon
+Diego Soto - Has Played Before: YES Guardian(s): Robin and Sarika Soto
+Herschel Krustofski - Has Played Before: YES Guardian(s): Hyman and Rachel Krustofski
+Kimmy Stein - Has Played Before: NO Guardian(s): Bill and Hillary Stein
+Joe Kavalier - Has Played Before: NO Guardian(s): Sam and Elaine Kavalier
+Arnold Willis - Has Played Before: NO Guardian(s): Claire Willis
+
+
