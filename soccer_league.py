@@ -1,4 +1,17 @@
+"""
+Python Web Development Techdegree
+Project 2 - Soccer League
+by Maxwell Hunter
+--------------------------------
+"""
+import csv
+
+
 '''
+Instructions:
+Build a tool to help a soccer coach divide 18 players into
+three well-balanced teams.
+
 As part of your job as coordinator for your town's youth soccer team,
 you need to divide the 18 children who have signed up for
 the league into three even teams - Dragons, Sharks and Raptors. In years past,
@@ -21,9 +34,7 @@ Finally, the program should output a text file named -- teams.txt -- that
 contains the league roster listing the team name, and each player on the team
 including the player's information: name, whether they've played soccer before
 and their guardians' names.
-
 '''
-import csv
 
 # Global variables
 
@@ -38,35 +49,38 @@ START_DATE = "12/15/18 at 5:30 PM"
 TEAM_PLAYERS = {
     'Dragons': [],
     'Sharks': [],
-    'Raptors': []}
+    'Raptors': [],
+    }
 
 
 # read the data from the supplied CSV file.
 with open('soccer_players.csv') as spreadsheet:
-    csvreader = csv.reader(spreadsheet)
     # Store that data in an appropriate data type so that it can be used in
     # the next task.
-    for i, row in enumerate(csvreader):
+    # for each row in the spreadsheet:
+    for i, row in enumerate(
+            csv.reader(spreadsheet)):
         # skip the first row, that only has titles
         if i == 0:
             pass
         # for the rest of the spreadsheet,
         else:
-            # build a dictionary of the players
+            # build a new dictionary of the players's info
             player_dict = {
                 'Height': row[1],
                 'Experience': row[2],
                 'Guardians': row[3],
                 'Team': "",
             }
-            # at the dictionary to the global dictionary
+            # add the dictionary to the global dictionary
+            # key for the player dictionary is the player's name
             PLAYERS[row[0]] = player_dict
 
     # Create logic that can iterate through all 18 players and assign them to
     # teams such that each team has the same number of players. The number of
     # experienced players on each team should also be the same.
 
-    # we're going to iterated over the experienced players first
+    # we're going to iterate over the experienced players first
     for bool in ['YES', 'NO']:
         # for all of the players
         for i in list(PLAYERS.keys()):
@@ -78,8 +92,7 @@ with open('soccer_players.csv') as spreadsheet:
                         # assign the player to a team on their dictionary
                         PLAYERS[i]['Team'] = list(TEAM_PLAYERS.keys())[COUNTER]
                         # add the player name to the team roster
-                        TEAM_PLAYERS[PLAYERS[i]['Team']].append(
-                            i)
+                        TEAM_PLAYERS[PLAYERS[i]['Team']].append(i)
                         # increment the counter
                         COUNTER += 1
                         # break the while True loop
@@ -110,33 +123,32 @@ with open('soccer_players.csv') as spreadsheet:
                 PLAYERS[player]['Experience'])
             # add their Guardian(s) name(s)
             output_string += '''Guardian(s): {}
-'''.format(
-                PLAYERS[player]['Guardians'])
+'''.format(PLAYERS[player]['Guardians'])
 
-            ''' EXTRA CREDIT:
-Create 18 text files ("welcome" letters to the players' guardians).
-You'll create 1 text file for each player. Use the player's name as the name
-of the file, in lowercase and with underscores and ending in .txt. For example
-kenneth_love.txt.
-
-Make sure that each file begins with the text "Dear" followed by the
-guardian(s) name(s). Also include the additional required information:
-player's name, team name, and date & time of first practice.
+            ''' EXTRA CREDIT
+Create 18 text files ("welcome" letters to the players' guardians). You'll
+create 1 text file for each player. Make sure that each file begins with the
+text "Dear" followed by the guardian(s) name(s). Also include the additional
+required information: player's name, team name, and date & time of first
+practice.
 '''
-
             welcome_text = """Dear {},
     Thank you for signing up {} for our Youth Soccer League.
-They have been assigned to Team {}. Their first practice is to be held at {}.
+Their first practice with Team {} is to be held at {}.
 We look forward to a great season with them!""".format(
                 PLAYERS[player]['Guardians'],
+                # referencing the league player by their first name only
                 player.split(" ")[0],
                 PLAYERS[player]['Team'],
                 START_DATE,
                 )
+            # from instructions: Use the player's name as the name
+            # of the file, in lowercase and with underscores and ending in .txt
+            # For example kenneth_love.txt.
             player_name_w_underscores = "_".join(player.split(" "))
             with open(player_name_w_underscores+".txt", 'w') as f:
                 f.write(welcome_text)
-        # add two blank lines between the teams
+        # add two blank lines between the teams back in teams.txt
         output_string += """
 
 """
