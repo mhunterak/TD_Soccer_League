@@ -115,7 +115,7 @@ if __name__ == '__main__':  # pragma: no cover
         for team in list(TEAM_PLAYERS.keys()):
             # add the team name with a new line
             output_string += """TEAM {}
-    """.format(team.upper())
+""".format(team.upper())
             # for each player on the team
             for player in TEAM_PLAYERS[team]:
                 # add the player name
@@ -125,7 +125,7 @@ if __name__ == '__main__':  # pragma: no cover
                     PLAYERS[player]['Experience'])
                 # add their Guardian(s) name(s)
                 output_string += '''Guardian(s): {}
-    '''.format(PLAYERS[player]['Guardians'])
+'''.format(PLAYERS[player]['Guardians'])
 
                 ''' EXTRA CREDIT
     Create 18 text files ("welcome" letters to the players' guardians). You'll
@@ -153,7 +153,7 @@ if __name__ == '__main__':  # pragma: no cover
             # add two blank lines between the teams back in teams.txt
             output_string += """
 
-    """
+"""
         # save output string as a txt file
         with open('teams.txt', 'w') as f:
             f.write(output_string)
