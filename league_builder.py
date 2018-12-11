@@ -78,9 +78,9 @@ if __name__ == '__main__':  # pragma: no cover
                 # key for the player dictionary is the player's name
                 PLAYERS[row[0]] = player_dict
 
-        # Create logic that can iterate through all 18 players and assign them to
-        # teams such that each team has the same number of players. The number of
-        # experienced players on each team should also be the same.
+        # Create logic that can iterate through all 18 players and assign them
+        # to teams such that each team has the same number of players. The 
+        # number of experienced players on each team should also be the same.
 
         # we're going to iterate over the experienced players first
         for bool in ['YES', 'NO']:
